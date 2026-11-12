@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.texture.cache" name="Texture Cache Utility" version="2.0.6" provider-name="Skippy-McSkipface">
+    <requires>
+        <import addon="xbmc.python" version="3.0.1"/>
+    </requires>
+    <extension point="xbmc.python.script" library="main.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py"/>
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <item library="context.py">
+                <label>30200</label>
+                <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,set) | String.IsEqual(ListItem.DBType,artist) | String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song) | String.IsEqual(ListItem.DBType,musicvideo)</visible>
+            </item>
+        </menu>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <license>GPL-2.0-or-later</license>
+        <source>script.texture.cache</source>
+        <website>https://kodi.tv</website>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+        <summary lang="en_GB">Kodi GUI wrapper (script.texture.cache) for Milhouse texturecache</summary>
+        <description lang="en_GB">Texture Cache Utility (script.texture.cache) is a Kodi GUI wrapper for Milhouse's texturecache. Cache artwork, prune, clean orphans, and run QA from Kodi with presets, progress, cancel, scheduled maintenance, and a library context menu. Bundled engine: https://github.com/xbmc/texturecache</description>
+        <news lang="en_GB">2.0.6: Import local artwork is in Pick commands as well as Run preset.</news>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+    </extension>
+</addon>

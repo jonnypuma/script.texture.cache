@@ -1,0 +1,111 @@
+Texture Cache Addon - Supported Commands
+========================================
+
+The following commands are implemented and will work when called from the Kodi addon.
+
+FULLY SUPPORTED COMMANDS
+------------------------
+
+Command    Addon Format                    Notes
+-------    ------------                    -----
+c, C       c or c movies or C movies       Cache/force-cache artwork. C needs class+filter unless allow.recacheall=yes
+nc         nc or nc movies                 Identify items needing cache (no download)
+lc, lnc,   lc or lc movies                 Same as c/nc/C but only for content since lastrunfile
+lC
+p, P       p or P                          Prune cache (dry-run vs auto-delete)
+s, S       s "Dr. No" or s Dr. No          Search texture cache. Multi-word: use quotes
+x, X,      x or x "filter"                  Extract rows. X=only missing files. f/F=stats
+f, F
+Xd         Xd or Xd "filter"               Delete rows for missing files
+d          d 226 227                       Delete specific rows by id
+r, R       r or R                          Find/remove orphaned files
+j, J,      j movies or jd movies "filter"   Query library JSON
+jd, Jd,
+jr, Jr
+qa, qax    qa or qa movies                 QA check, qax=rescan failures
+set,       set movie 123 art.poster path    Set library values (set stdin: batch mode)
+testset
+remove     remove movie 123                 Remove library item
+imdb       imdb movies                     Needs omdb.apikey in config
+purge,     purge unhashed youtube iplayer   Delete cached artwork by pattern
+purgetest
+watched    watched movies backup file.txt   Backup/restore watched lists
+duplicates duplicates                      List duplicate movies by IMDb
+missing    missing movies "My Movies"       Use quotes for label with spaces
+ascan,     vscan or vscan path              Library scan
+vscan
+aclean,    aclean or vclean                 Clean library
+vclean
+directory, directory path                   Directory listing
+rdirectory
+readfile   readfile infile outfile          Read remote file
+sources    sources or sources video         List sources
+           "My Movies"
+status     status or status 600             Client status
+monitor    monitor                         Event notifications (blocking)
+rbphdmi    rbphdmi or rbphdmi 900           RPi HDMI power
+stats      stats or stats tvshows episodes  Library stats
+input      input back left select           Send input
+volume     volume or volume mute 100        Volume control
+stress-test stress-test thumbnail 444 0.1 9 GUI stress test
+screenshot screenshot                      Screen grab
+power      power shutdown                  Power state
+wake       wake                            Wake-on-LAN (needs network.mac)
+exec,      exec script.artwork.downloader   Execute addon
+execw      silent=true
+setsetting, getsetting locale.language      Settings
+getsetting,
+getsettings
+debugon,   debugon                         Debug toggle
+debugoff
+play,      play "path"                      Playback control
+playw,
+stop,
+pause
+config     config                          Display config
+version    version                         Show version
+update,    update                          Update script (disabled in addon mode)
+fupdate
+notify     notify title message            GUI notification
+fixurls    fixurls                         Fix mangled URLs
+profiles   profiles                        List profiles
+
+ADDON COMMAND SEQUENCE FORMAT
+-----------------------------
+
+In addon settings, enter commands separated by commas:
+  c, R, p  — cache, remove orphans, prune (dry-run)
+  c movies, R  — cache movies only, then remove orphans
+  missing movies "My Movies"  — use quotes for labels with spaces
+
+REQUIREMENTS
+------------
+
+- Web server: Enable in Kodi (Settings → Services) for c, C, readfile
+- Remote control: Enable "Allow programs on this system to control Kodi"
+- imdb: Add omdb.apikey=yourkey to texturecache.cfg
+- lastrunfile: Set in config for lc, lnc, lC to work
+- network.mac: Set for wake command
+
+COMMAND OUTPUT DISPLAY
+----------------------
+
+Output is streamed to a file (no RAM buffer). Foreground runs open a results
+window when the sequence finishes. Background and scheduled runs skip that
+window — use Last results or Background run status instead. Output is
+organized with headers per command.
+
+BACKGROUND RUNS
+---------------
+
+Enable Run in background from the main menu or Commands settings. Open the
+addon again and choose Background run status to view progress or Stop.
+A second start never runs in parallel: you can stop the current run first.
+
+COMMANDS THAT MAY BE LIMITED IN ADDON CONTEXT
+---------------------------------------------
+
+j, J, jd, etc.  — Output shown in results modal
+monitor         — Blocks until events; progress dialog shows elapsed time
+set (stdin)     — Batch mode reads from stdin; addon doesn't provide stdin
+update, fupdate — Disabled in addon mode (would kill Kodi)

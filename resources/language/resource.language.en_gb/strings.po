@@ -1,0 +1,546 @@
+# Kodi Media Center language file
+# Addon Name: Texture Cache Utility
+# Addon id: script.texture.cache
+# Addon Provider: Skippy-McSkipface
+msgid ""
+msgstr ""
+"Project-Id-Version: script.texture.cache\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30000"
+msgid "Texture Cache Utility"
+msgstr "Texture Cache Utility"
+
+msgctxt "#30001"
+msgid "Run preset…"
+msgstr "Run preset…"
+
+msgctxt "#30002"
+msgid "Run custom sequence"
+msgstr "Run custom sequence"
+
+msgctxt "#30003"
+msgid "Last results"
+msgstr "Last results"
+
+msgctxt "#30004"
+msgid "Export last output…"
+msgstr "Export last output…"
+
+msgctxt "#30005"
+msgid "Supported commands"
+msgstr "Supported commands"
+
+msgctxt "#30006"
+msgid "Tools…"
+msgstr "Tools…"
+
+msgctxt "#30007"
+msgid "Settings"
+msgstr "Settings"
+
+msgctxt "#30010"
+msgid "Supported Commands"
+msgstr "Supported Commands"
+
+msgctxt "#30020"
+msgid "Preflight check"
+msgstr "Preflight check"
+
+msgctxt "#30021"
+msgid "Prune delete blocked — using dry-run (p). Enable in settings to allow P."
+msgstr "Prune delete blocked — using dry-run (p). Enable in settings to allow P."
+
+msgctxt "#30022"
+msgid "Run with the following commands?"
+msgstr "Run with the following commands?"
+
+msgctxt "#30023"
+msgid "Media type"
+msgstr "Media type"
+
+msgctxt "#30024"
+msgid "Command preset"
+msgstr "Command preset"
+
+msgctxt "#30030"
+msgid "Export"
+msgstr "Export"
+
+msgctxt "#30031"
+msgid "Show file path"
+msgstr "Show file path"
+
+msgctxt "#30032"
+msgid "Copy path to clipboard"
+msgstr "Copy path to clipboard"
+
+msgctxt "#30033"
+msgid "Open folder (FileManager)"
+msgstr "Open folder (FileManager)"
+
+msgctxt "#30040"
+msgid "Run status"
+msgstr "Run status"
+
+msgctxt "#30041"
+msgid "Summary"
+msgstr "Summary"
+
+msgctxt "#30042"
+msgid "Full log path"
+msgstr "Full log path"
+
+msgctxt "#30043"
+msgid "Details…"
+msgstr "Details…"
+
+msgctxt "#30044"
+msgid "Texture Cache - Results"
+msgstr "Texture Cache - Results"
+
+msgctxt "#30045"
+msgid "Last results"
+msgstr "Last results"
+
+msgctxt "#30046"
+msgid "Error"
+msgstr "Error"
+
+msgctxt "#30047"
+msgid "Texture Cache Error"
+msgstr "Texture Cache Error"
+
+msgctxt "#30048"
+msgid "Cancelled"
+msgstr "Cancelled"
+
+msgctxt "#30049"
+msgid "Command sequence complete"
+msgstr "Command sequence complete"
+
+msgctxt "#30050"
+msgid "Run fixurls"
+msgstr "Run fixurls"
+
+msgctxt "#30051"
+msgid "View tools help"
+msgstr "View tools help"
+
+msgctxt "#30052"
+msgid "Back"
+msgstr "Back"
+
+msgctxt "#30053"
+msgid "Tools"
+msgstr "Tools"
+
+msgctxt "#30060"
+msgid "A texture cache run is already in progress."
+msgstr "A texture cache run is already in progress."
+
+msgctxt "#30074"
+msgid "Stop the current run and start this one?"
+msgstr "Stop the current run and start this one?"
+
+msgctxt "#30075"
+msgid "Waiting for the current run to stop..."
+msgstr "Waiting for the current run to stop..."
+
+msgctxt "#30076"
+msgid "Could not stop the current run. It is still in progress."
+msgstr "Could not stop the current run. It is still in progress."
+
+msgctxt "#30077"
+msgid "Stop and start"
+msgstr "Stop and start"
+
+msgctxt "#30078"
+msgid "Keep current run"
+msgstr "Keep current run"
+
+msgctxt "#30079"
+msgid "Stop current run"
+msgstr "Stop current run"
+
+msgctxt "#30080"
+msgid "Stop this run?"
+msgstr "Stop this run?"
+
+msgctxt "#30081"
+msgid "Stopping the current run..."
+msgstr "Stopping the current run..."
+
+msgctxt "#30082"
+msgid "No run is in progress to stop."
+msgstr "No run is in progress to stop."
+
+msgctxt "#30083"
+msgid "This will run in the background. Open Texture Cache → Background run status to stop."
+msgstr "This will run in the background. Open Texture Cache → Background run status to stop."
+
+msgctxt "#30084"
+msgid "Recent runs:"
+msgstr "Recent runs:"
+
+msgctxt "#30085"
+msgid "Heartbeat is stale (the device may have been asleep)."
+msgstr "Heartbeat is stale (the device may have been asleep)."
+
+msgctxt "#30088"
+msgid "This will cache artwork for the TV show, not only this episode or season."
+msgstr "This will cache artwork for the TV show, not only this episode or season."
+
+msgctxt "#30089"
+msgid "Could not resolve library ID %s; using the list title instead."
+msgstr "Could not resolve library ID %s; using the list title instead."
+
+msgctxt "#30094"
+msgid "View details"
+msgstr "View details"
+
+msgctxt "#30095"
+msgid "Context cache is available for movies, TV, music, and sets."
+msgstr "Context cache is available for movies, TV, music, and sets."
+
+msgctxt "#30096"
+msgid "Could not determine item title."
+msgstr "Could not determine item title."
+
+msgctxt "#30097"
+msgid "Could not determine item to cache."
+msgstr "Could not determine item to cache."
+
+msgctxt "#30061"
+msgid "Pick commands"
+msgstr "Pick commands"
+
+msgctxt "#30062"
+msgid "Replace command box"
+msgstr "Replace command box"
+
+msgctxt "#30063"
+msgid "Append to command box"
+msgstr "Append to command box"
+
+msgctxt "#30064"
+msgid "Update command box"
+msgstr "Update command box"
+
+msgctxt "#30065"
+msgid "Command box now contains:"
+msgstr "Command box now contains:"
+
+msgctxt "#30066"
+msgid "No commands selected."
+msgstr "No commands selected."
+
+msgctxt "#30067"
+msgid "Show tools folder"
+msgstr "Show tools folder"
+
+msgctxt "#30068"
+msgid "Path copied to clipboard."
+msgstr "Path copied to clipboard."
+
+msgctxt "#30069"
+msgid "Scheduled run complete"
+msgstr "Scheduled run complete"
+
+msgctxt "#30070"
+msgid "Scheduled run finished with errors"
+msgstr "Scheduled run finished with errors"
+
+msgctxt "#30072"
+msgid "Background run status"
+msgstr "Background run status"
+
+msgctxt "#30073"
+msgid "No background run is in progress."
+msgstr "No background run is in progress."
+
+# Settings categories
+msgctxt "#30100"
+msgid "Web server"
+msgstr "Web server"
+
+msgctxt "#30101"
+msgid "Commands"
+msgstr "Commands"
+
+msgctxt "#30102"
+msgid "Safety"
+msgstr "Safety"
+
+msgctxt "#30103"
+msgid "Advanced"
+msgstr "Advanced"
+
+msgctxt "#30104"
+msgid "Schedule"
+msgstr "Schedule"
+
+# Settings labels
+msgctxt "#30110"
+msgid "Web server IP / host"
+msgstr "Web server IP / host"
+
+msgctxt "#30111"
+msgid "Port"
+msgstr "Port"
+
+msgctxt "#30112"
+msgid "Username"
+msgstr "Username"
+
+msgctxt "#30113"
+msgid "Password"
+msgstr "Password"
+
+msgctxt "#30114"
+msgid "Use this Kodi's web server"
+msgstr "Use this Kodi's web server"
+
+msgctxt "#30115"
+msgid "Test connection"
+msgstr "Test connection"
+
+msgctxt "#30116"
+msgid "Connection"
+msgstr "Connection"
+
+msgctxt "#30117"
+msgid "This Kodi"
+msgstr "This Kodi"
+
+msgctxt "#30118"
+msgid "Manual / remote Kodi"
+msgstr "Manual / remote Kodi"
+
+msgctxt "#30119"
+msgid "Auto"
+msgstr "Auto"
+
+msgctxt "#30125"
+msgid "Pick commands…"
+msgstr "Pick commands…"
+
+msgctxt "#30126"
+msgid "Pick scheduled commands…"
+msgstr "Pick scheduled commands…"
+
+msgctxt "#30127"
+msgid "Run in background"
+msgstr "Run in background"
+
+msgctxt "#30128"
+msgid "Context menu match"
+msgstr "Context menu match"
+
+msgctxt "#30120"
+msgid "Verbose logging to kodi.log"
+msgstr "Verbose logging to kodi.log"
+
+msgctxt "#30197"
+msgid "Writes schedule startup and on/off details to kodi.log. Also turns on detailed texturecache logging during a run. Leave this off unless you are troubleshooting."
+msgstr "Writes schedule startup and on/off details to kodi.log. Also turns on detailed texturecache logging during a run. Leave this off unless you are troubleshooting."
+
+msgctxt "#30121"
+msgid "Command sequence"
+msgstr "Command sequence"
+
+msgctxt "#30122"
+msgid "Run"
+msgstr "Run"
+
+msgctxt "#30123"
+msgid "View supported commands"
+msgstr "View supported commands"
+
+msgctxt "#30124"
+msgid "View last results"
+msgstr "View last results"
+
+msgctxt "#30130"
+msgid "Confirm destructive commands"
+msgstr "Confirm destructive commands"
+
+msgctxt "#30131"
+msgid "Allow prune delete (P)"
+msgstr "Allow prune delete (P)"
+
+msgctxt "#30132"
+msgid "Enable preflight checks"
+msgstr "Enable preflight checks"
+
+msgctxt "#30133"
+msgid "Continue sequence on error"
+msgstr "Continue sequence on error"
+
+msgctxt "#30140"
+msgid "Download threads"
+msgstr "Download threads"
+
+msgctxt "#30141"
+msgid "Last-run file path (lastrunfile)"
+msgstr "Last-run file path (lastrunfile)"
+
+msgctxt "#30142"
+msgid "OMDb API key"
+msgstr "OMDb API key"
+
+msgctxt "#30143"
+msgid "Allow force re-cache all (C)"
+msgstr "Allow force re-cache all (C)"
+
+msgctxt "#30144"
+msgid "Cache cast thumbnails"
+msgstr "Cache cast thumbnails"
+
+msgctxt "#30145"
+msgid "QA period (days)"
+msgstr "QA period (days)"
+
+msgctxt "#30150"
+msgid "Enable scheduled maintenance"
+msgstr "Enable scheduled maintenance"
+
+msgctxt "#30151"
+msgid "Interval (hours)"
+msgstr "Interval (hours)"
+
+msgctxt "#30152"
+msgid "Require idle (minutes)"
+msgstr "Require idle (minutes)"
+
+msgctxt "#30153"
+msgid "Scheduled command sequence"
+msgstr "Scheduled command sequence"
+
+msgctxt "#30155"
+msgid "Last scheduled run"
+msgstr "Last scheduled run"
+
+msgctxt "#30156"
+msgid "Show last scheduled run"
+msgstr "Show last scheduled run"
+
+msgctxt "#30200"
+msgid "Cache artwork for this item"
+msgstr "Cache artwork for this item"
+
+msgctxt "#30170"
+msgid "Read host, port, username and password from this Kodi (Settings → Services → Control). Turn off to control a different Kodi."
+msgstr "Read host, port, username and password from this Kodi (Settings → Services → Control). Turn off to control a different Kodi."
+
+msgctxt "#30171"
+msgid "Send JSONRPC.Ping to the configured web server and report success, HTTP 401, or connection refused."
+msgstr "Send JSONRPC.Ping to the configured web server and report success, HTTP 401, or connection refused."
+
+msgctxt "#30172"
+msgid "Choose from a safe list. The command box is filled with what you picked. power, remove, and purge are not in the list."
+msgstr "Choose from a safe list. The command box is filled with what you picked. power, remove, and purge are not in the list."
+
+msgctxt "#30173"
+msgid "Used only when “Use this Kodi's web server” is off."
+msgstr "Used only when “Use this Kodi's web server” is off."
+
+msgctxt "#30174"
+msgid "Comma-separated texturecache commands. Use Pick commands to fill this box."
+msgstr "Comma-separated texturecache commands. Use Pick commands to fill this box."
+
+msgctxt "#30175"
+msgid "Use a non-blocking progress bar so you can keep using Kodi. Stop from Background run status. Scheduled runs always run in the background."
+msgstr "Use a non-blocking progress bar so you can keep using Kodi. Stop from Background run status. Scheduled runs always run in the background."
+
+msgctxt "#30176"
+msgid "How the library context menu finds the selected item. Library ID is unique; title can match more than one item."
+msgstr "How the library context menu finds the selected item. Library ID is unique; title can match more than one item."
+
+msgctxt "#30177"
+msgid "Read-only. Time of the last scheduled maintenance run that actually started. Never until the first run."
+msgstr "Read-only. Time of the last scheduled maintenance run that actually started. Never until the first run."
+
+msgctxt "#30178"
+msgid "Show whether a cache run is in progress, the current command, and percent complete. Stop is offered when a run is active."
+msgstr "Show whether a cache run is in progress, the current command, and percent complete. Stop is offered when a run is active."
+
+msgctxt "#30179"
+msgid "Protocol for the Kodi web server. Auto follows this Kodi's SSL setting, or tries both for a remote host."
+msgstr "Protocol for the Kodi web server. Auto follows this Kodi's SSL setting, or tries both for a remote host."
+
+msgctxt "#30180"
+msgid "Ask the current cache run to stop. Scheduled ticks will not do this automatically."
+msgstr "Ask the current cache run to stop. Scheduled ticks will not do this automatically."
+
+msgctxt "#30181"
+msgid "Library ID (DBID)"
+msgstr "Library ID (DBID)"
+
+msgctxt "#30182"
+msgid "Title"
+msgstr "Title"
+
+msgctxt "#30183"
+msgid "Library ID and title"
+msgstr "Library ID and title"
+
+msgctxt "#30184"
+msgid "HTTP"
+msgstr "HTTP"
+
+msgctxt "#30185"
+msgid "HTTPS"
+msgstr "HTTPS"
+
+msgctxt "#30086"
+msgid "Those commands are already in the command box."
+msgstr "Those commands are already in the command box."
+
+msgctxt "#30186"
+msgid "Repeat"
+msgstr "Repeat"
+
+msgctxt "#30187"
+msgid "Hours"
+msgstr "Hours"
+
+msgctxt "#30188"
+msgid "Days"
+msgstr "Days"
+
+msgctxt "#30189"
+msgid "Weekly"
+msgstr "Weekly"
+
+msgctxt "#30190"
+msgid "Monthly"
+msgstr "Monthly"
+
+msgctxt "#30191"
+msgid "Every (days)"
+msgstr "Every (days)"
+
+msgctxt "#30192"
+msgid "Hours and days count from the last scheduled run. Weekly is 7 days. Monthly is the same day next month."
+msgstr "Hours and days count from the last scheduled run. Weekly is 7 days. Monthly is the same day next month."
+
+msgctxt "#30193"
+msgid "Next scheduled run"
+msgstr "Next scheduled run"
+
+msgctxt "#30194"
+msgid "Earliest time the next run can start. If that time has already passed it is cleared and set to 2 hours from now. Turning the scheduler off and on does the same. Shows Running while the scheduled run is active."
+msgstr "Earliest time the next run can start. If that time has already passed it is cleared and set to 2 hours from now. Turning the scheduler off and on does the same. Shows Running while the scheduled run is active."
+
+msgctxt "#30195"
+msgid "Running"
+msgstr "Running"
+
+msgctxt "#30196"
+msgid "Due now"
+msgstr "Due now"
