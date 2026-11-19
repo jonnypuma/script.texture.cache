@@ -1,5 +1,7 @@
 # Texture Cache Utility (Kodi Addon)
 
+**Project page:** [jonnypuma.github.io/#/script.texture.cache](https://jonnypuma.github.io/#/script.texture.cache) · **All add-ons and apps by jonnypuma:** [jonnypuma.github.io](https://jonnypuma.github.io/)
+
 A Kodi addon that provides a GUI wrapper for [Milhouse's texturecache](https://github.com/xbmc/texturecache) — the utility for managing and refreshing the Kodi texture cache (Textures13.db and Thumbnails folder).
 
 **Current version: 2.0.5** — see [CHANGELOG.md](CHANGELOG.md).
