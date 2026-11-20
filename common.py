@@ -129,27 +129,33 @@ def _write_profile_setting(setting_id, value):
     if not os.path.isfile(path):
         schedule_verbose("settings file missing: %s" % path)
         return False
+    tmp_path = "%s.tmp" % path
     try:
-        import re
-        with open(path, "r", encoding="utf-8") as handle:
-            data = handle.read()
-        body = re.compile(
-            r'(<setting id="%s"[^>]*>)(.*?)(</setting>)' % re.escape(setting_id),
-            re.DOTALL,
-        )
-        updated, count = body.subn(r"\g<1>%s\g<3>" % value, data, count=1)
-        if count == 0:
-            attr = re.compile(
-                r'(<setting id="%s"[^>]*\bvalue=")[^"]*(")' % re.escape(setting_id)
-            )
-            updated, count = attr.subn(r"\g<1>%s\g<2>" % value, data, count=1)
-        if count == 0:
+        import xml.etree.ElementTree as ET
+
+        tree = ET.parse(path)
+        root = tree.getroot()
+        target = None
+        for elem in root.iter("setting"):
+            if elem.get("id") == setting_id:
+                target = elem
+                break
+        if target is None:
             schedule_verbose("settings file has no %s entry in %s" % (setting_id, path))
             return False
-        with open(path, "w", encoding="utf-8") as handle:
-            handle.write(updated)
+        if "value" in target.attrib and not (target.text or "").strip():
+            target.set("value", value)
+        else:
+            target.text = value
+        tree.write(tmp_path, encoding="utf-8", xml_declaration=True)
+        os.replace(tmp_path, path)
         return True
     except Exception as e:
+        if os.path.exists(tmp_path):
+            try:
+                os.remove(tmp_path)
+            except OSError:
+                pass
         xbmc.log(
             "Texture Cache Addon: could not store setting %s - %s" % (setting_id, e),
             xbmc.LOGWARNING,

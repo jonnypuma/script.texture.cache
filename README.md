@@ -4,7 +4,7 @@
 
 A Kodi addon that provides a GUI wrapper for [Milhouse's texturecache](https://github.com/xbmc/texturecache) — the utility for managing and refreshing the Kodi texture cache (Textures13.db and Thumbnails folder).
 
-**Current version: 2.0.5** — see [CHANGELOG.md](CHANGELOG.md).
+**Current version: 2.0.6** — see [CHANGELOG.md](CHANGELOG.md).
 
 ## Features
 

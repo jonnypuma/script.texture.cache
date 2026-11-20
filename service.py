@@ -28,18 +28,15 @@ class TextureCacheMonitor(xbmc.Monitor):
         xbmc.Monitor.__init__(self)
         self.last_launch_attempt = 0.0
         self._schedule_was_on = None
+        self._common = None
+        self._settings_dirty = True
 
-    def _maybe_run(self):
-        global addon
-        addon = xbmcaddon.Addon()
+    def _get_common(self):
+        if self._common is None:
+            self._common = _load_common()
+        return self._common
 
-        try:
-            common = _load_common()
-        except Exception as e:
-            xbmc.log("Texture Cache Service: could not load common.py - %s" % e, xbmc.LOGERROR)
-            return
-
-        common.refresh_addon()
+    def _sync_schedule_toggle(self, common):
         enabled = common.get_bool("enable_service", False)
         if self._schedule_was_on is None:
             common.schedule_verbose("service first tick enabled=%s" % enabled)
@@ -52,6 +49,36 @@ class TextureCacheMonitor(xbmc.Monitor):
             common.schedule_verbose("service saw scheduler turn off")
             common.clear_next_scheduled_run()
         self._schedule_was_on = enabled
+        return enabled
+
+    def onSettingsChanged(self):
+        global addon
+        addon = xbmcaddon.Addon()
+        self._settings_dirty = True
+        try:
+            common = self._get_common()
+            common.refresh_addon()
+            enabled = self._sync_schedule_toggle(common)
+            if enabled:
+                common.ensure_schedule_origin()
+                common.refresh_next_scheduled_display()
+        except Exception as e:
+            xbmc.log("Texture Cache Service: onSettingsChanged error - %s" % e, xbmc.LOGERROR)
+
+    def _maybe_run(self):
+        try:
+            common = self._get_common()
+        except Exception as e:
+            xbmc.log("Texture Cache Service: could not load common.py - %s" % e, xbmc.LOGERROR)
+            return
+
+        if self._settings_dirty:
+            global addon
+            addon = xbmcaddon.Addon()
+            common.refresh_addon()
+            self._settings_dirty = False
+
+        enabled = self._sync_schedule_toggle(common)
         if not enabled:
             return
 
@@ -92,7 +119,8 @@ class TextureCacheMonitor(xbmc.Monitor):
 
 
 if __name__ == "__main__":
-    xbmc.log("Texture Cache Service: started (addon 2.0.6)", xbmc.LOGINFO)
+    version = addon.getAddonInfo("version") or "unknown"
+    xbmc.log("Texture Cache Service: started (addon %s)" % version, xbmc.LOGINFO)
     try:
         common = _load_common()
         common.begin_kodi_session()
